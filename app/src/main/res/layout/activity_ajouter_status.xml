@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ajouter_status"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.espoir.app.AjouterStatus"
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@android:drawable/sym_def_app_icon"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="26dp"
+        android:id="@+id/imageStatus" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:inputType="textPersonName"
+        android:hint="Ecrire uen citation......"
+        android:ems="10"
+        android:padding="10dp"
+        android:background="#12333333"
+        android:id="@+id/textStatus"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+       android:layout_margin="20dp"
+
+        />
+
+    <Button
+        android:background="@color/colorPrimary"
+        android:text="Ajouter Citation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ajouterTextStatus"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentStart="true"
+ />
+
+    <Button
+        android:text="Ajouter Ma peinture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ajouterImageStatus"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentStart="true" />
+
+</LinearLayout>

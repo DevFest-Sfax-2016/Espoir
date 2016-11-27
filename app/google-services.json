@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "809573390372",
+    "firebase_url": "https://espoir-54c47.firebaseio.com",
+    "project_id": "espoir-54c47",
+    "storage_bucket": "espoir-54c47.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809573390372:android:ded4f9f1498e66bf",
+        "android_client_info": {
+          "package_name": "com.espoir.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809573390372-fnvbjtubd6juj2jqmbe9e6vnkvj7cac0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.espoir.app",
+            "certificate_hash": "0468F236A70004D932914238F8E578990346565D"
+          }
+        },
+        {
+          "client_id": "809573390372-26jfhgi7ji3gomqqibqua0vemm5u1eo9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoF5NMaTj4bNePJQOMy78qkD3bwgq_Reg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "809573390372-26jfhgi7ji3gomqqibqua0vemm5u1eo9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
