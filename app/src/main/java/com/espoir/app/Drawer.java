@@ -1,10 +1,16 @@
 package com.espoir.app;
 
+<<<<<<< HEAD
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
+=======
+import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+>>>>>>> b195bb06ae96c9b4b6a9e8a57c82413dce5bb94c
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -82,6 +88,7 @@ public class Drawer extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+<<<<<<< HEAD
         if (id == R.id.nav_actualites) {
 
 
@@ -97,6 +104,20 @@ public class Drawer extends AppCompatActivity
         } else if (id == R.id.nav_reseaux) {
 
         } else if (id == R.id.nav_deconnect) {
+=======
+        if (id == R.id.nav_camera) {
+            // Handle the camera action
+        } else if (id == R.id.nav_gallery) {
+
+
+        } else if (id == R.id.nav_slideshow) {
+
+        } else if (id == R.id.nav_manage) {
+
+        } else if (id == R.id.nav_share) {
+
+        } else if (id == R.id.nav_send) {
+>>>>>>> b195bb06ae96c9b4b6a9e8a57c82413dce5bb94c
 
         }
 

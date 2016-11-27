@@ -1,27 +1,74 @@
 apply plugin: 'com.android.application'
 
+
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.2"
+
     defaultConfig {
         applicationId "com.espoir.app"
         minSdkVersion 19
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        packagingOptions {
+            exclude 'META-INF/DEPENDENCIES.txt'
+            exclude 'META-INF/LICENSE.txt'
+            exclude 'META-INF/NOTICE.txt'
+            exclude 'META-INF/NOTICE'
+            exclude 'META-INF/LICENSE'
+            exclude 'META-INF/DEPENDENCIES'
+            exclude 'META-INF/notice.txt'
+            exclude 'META-INF/license.txt'
+            exclude 'META-INF/dependencies.txt'
+            exclude 'META-INF/LGPL2.1'
+        }
+    }
+}
+
+configurations.all {
+    resolutionStrategy.force 'com.android.support:support-annotations:24.2.1'
+}
+
+// Based on: http://goo.gl/cuAayN
+// To run a test with permission granted:
+//  ./gradlew :app:grantDebugPermissions :app:runDebugEspressoTests
+android.applicationVariants.all { variant ->
+    def applicationId = variant.applicationId
+    def adb = android.getAdbExe().toString()
+    def variantName = variant.name.capitalize()
+    def grantPermissionTask = tasks.create(name: "grant${variantName}Permissions", type: Exec) {
+        "${adb} devices".execute().text.eachLine {
+            if (it.endsWith("device")) {
+                def device = it.split()[0]
+                commandLine(adb, "-s", device, "shell", "pm", "grant", applicationId,
+                        "android.permission.WRITE_EXTERNAL_STORAGE")
+                commandLine(adb, "-s", device, "shell", "pm", "grant", applicationId,
+                        "android.permission.READ_EXTERNAL_STORAGE")
+            }
+        }
+    }
+
+    grantPermissionTask.dependsOn "install${variantName}"
+    grantPermissionTask.dependsOn "install${variantName}AndroidTest"
+
+    def runEspressoTestsTask = tasks.create(name: "run${variantName}EspressoTests", type: Exec) {
+        commandLine(adb, "shell", "am", "instrument", "-w", "-r", "-e", "debug", "false", "-e",
+                "class", "${applicationId}.MainActivityTest",
+                "${applicationId}.test/android.support.test.runner.AndroidJUnitRunner")
     }
 }
 
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+<<<<<<< HEAD
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -35,3 +82,38 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:recyclerview-v7:24.2.1'
 }
+=======
+
+    // FirebaseUI Database only
+
+
+    compile 'com.google.firebase:firebase-auth:9.8.0'
+    compile 'com.google.firebase:firebase-database:9.8.0'
+    compile 'com.google.firebase:firebase-database:9.8.0'
+    compile 'com.google.firebase:firebase-auth:9.8.0'
+    compile 'com.facebook.android:facebook-android-sdk:4.1.0'
+    compile 'com.squareup.picasso:picasso:2.5.0'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.google.firebase:firebase-core:9.8.0'
+    compile 'com.google.firebase:firebase-storage:9.8.0'
+    compile 'com.google.firebase:firebase-ads:9.8.0'
+    compile 'com.firebase:firebase-client-android:2.5.2'
+    compile 'com.firebaseui:firebase-ui-storage:0.6.0'
+    compile 'com.google.android.gms:play-services-auth:9.8.0'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.android.support:support-v13:24.2.1'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'com.android.support:cardview-v7:24.2.1'
+    compile 'com.firebaseui:firebase-ui-database:1.0.0'
+    compile 'com.weiwangcn.betterspinner:library-material:1.1.0'
+    compile 'com.bignerdranch.android:recyclerview-multiselect:0.2'
+    compile 'com.github.clans:fab:1.6.2'
+    compile 'pub.devrel:easypermissions:0.2.0'
+    testCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    androidTestCompile 'com.android.support.test:runner:0.5'
+}
+apply plugin: 'com.google.gms.google-services'
+>>>>>>> b195bb06ae96c9b4b6a9e8a57c82413dce5bb94c
