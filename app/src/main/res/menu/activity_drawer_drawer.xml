@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_actualites"
+            android:icon="@drawable/ic_act"
+            android:title="Actualités" />
+        <item
+            android:id="@+id/nav_galeries"
+            android:icon="@drawable/ic_galerie"
+            android:title="Galerie" />
+        <item
+            android:id="@+id/nav_evenements"
+            android:icon="@drawable/ic_event_note"
+            android:title="Evenements" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_amis"
+                android:icon="@drawable/ic_amis"
+                android:title="Inviter amis" />
+            <item
+                android:id="@+id/nav_reseaux"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_deconnect"
+                android:icon="@drawable/ic_deconnect"
+                android:title="Déconnecter" />
+        </menu>
+    </item>
+
+</menu>
