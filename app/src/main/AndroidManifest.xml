@@ -22,10 +22,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 <<<<<<< HEAD
+<<<<<<< HEAD
+        <activity android:name=".MainActivity">
+=======
         <activity
             android:name=".Drawer"
             android:label="@string/title_activity_drawer"
             android:theme="@style/AppTheme.NoActionBar">
+>>>>>>> amal
 =======
         <activity android:name=".LoginActivity">
 >>>>>>> b195bb06ae96c9b4b6a9e8a57c82413dce5bb94c
@@ -34,9 +38,16 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> amal
 =======
         <activity
             android:name=".Drawer"
