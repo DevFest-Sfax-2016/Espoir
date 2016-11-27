@@ -11,6 +11,11 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.espoir.app.Drawer"
+<<<<<<< HEAD
+    tools:showIn="@layout/app_bar_drawer"
+    >
+=======
     tools:showIn="@layout/app_bar_drawer">
+>>>>>>> b195bb06ae96c9b4b6a9e8a57c82413dce5bb94c
 
 </RelativeLayout>

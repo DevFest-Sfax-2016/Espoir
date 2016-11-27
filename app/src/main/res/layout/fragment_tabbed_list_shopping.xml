@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.espoir.app.Accueil">
+
+    android:background="#fff">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -11,24 +12,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.v7.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/rv_status"/>
 
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_catecorie"
+android:background="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        </android.support.v7.widget.RecyclerView>
         <android.support.design.widget.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
-            app:fabSize="mini"
-<<<<<<< HEAD
-=======
-            app:srcCompat="@drawable/fab_add"
->>>>>>> b195bb06ae96c9b4b6a9e8a57c82413dce5bb94c
-            android:id="@+id/floatingActionButton"
-            app:layout_anchorGravity="right|end|bottom"
-            app:layout_anchor="@id/rv_status"/>
-
-
+            app:fabSize="normal"
+            app:layout_anchor="@id/rv_catecorie"
+            app:layout_anchorGravity="bottom|right|end"
+            android:src="@drawable/ic_galerie"
+            android:id="@+id/addNewCategorie"
+            app:backgroundTint="#16a085" />
     </android.support.design.widget.CoordinatorLayout>
+
 </FrameLayout>

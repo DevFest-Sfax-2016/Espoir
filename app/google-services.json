@@ -1,20 +1,42 @@
 {
   "project_info": {
+<<<<<<< HEAD
+    "project_number": "22803112995",
+    "firebase_url": "https://espoir-d08e3.firebaseio.com",
+    "project_id": "espoir-d08e3",
+    "storage_bucket": "espoir-d08e3.appspot.com"
+=======
     "project_number": "809573390372",
     "firebase_url": "https://espoir-54c47.firebaseio.com",
     "project_id": "espoir-54c47",
     "storage_bucket": "espoir-54c47.appspot.com"
+>>>>>>> b195bb06ae96c9b4b6a9e8a57c82413dce5bb94c
   },
   "client": [
     {
       "client_info": {
+<<<<<<< HEAD
+        "mobilesdk_app_id": "1:22803112995:android:ded4f9f1498e66bf",
+=======
         "mobilesdk_app_id": "1:809573390372:android:ded4f9f1498e66bf",
+>>>>>>> b195bb06ae96c9b4b6a9e8a57c82413dce5bb94c
         "android_client_info": {
           "package_name": "com.espoir.app"
         }
       },
       "oauth_client": [
         {
+<<<<<<< HEAD
+          "client_id": "22803112995-85clcqpkbde8eapcfvb8o1bf09h1gfu6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.espoir.app",
+            "certificate_hash": "765E0C771565B8061373BDEC2ACFCD36AF65E908"
+          }
+        },
+        {
+          "client_id": "22803112995-enu90d3165d6hgia1ci9hltf2v3a2a1n.apps.googleusercontent.com",
+=======
           "client_id": "809573390372-fnvbjtubd6juj2jqmbe9e6vnkvj7cac0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -24,12 +46,17 @@
         },
         {
           "client_id": "809573390372-26jfhgi7ji3gomqqibqua0vemm5u1eo9.apps.googleusercontent.com",
+>>>>>>> b195bb06ae96c9b4b6a9e8a57c82413dce5bb94c
           "client_type": 3
         }
       ],
       "api_key": [
         {
+<<<<<<< HEAD
+          "current_key": "AIzaSyD31lUAbBvw9rsyUDZkyuMeBTXFUl-3rDU"
+=======
           "current_key": "AIzaSyBoF5NMaTj4bNePJQOMy78qkD3bwgq_Reg"
+>>>>>>> b195bb06ae96c9b4b6a9e8a57c82413dce5bb94c
         }
       ],
       "services": {
@@ -40,7 +67,11 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
+<<<<<<< HEAD
+              "client_id": "22803112995-enu90d3165d6hgia1ci9hltf2v3a2a1n.apps.googleusercontent.com",
+=======
               "client_id": "809573390372-26jfhgi7ji3gomqqibqua0vemm5u1eo9.apps.googleusercontent.com",
+>>>>>>> b195bb06ae96c9b4b6a9e8a57c82413dce5bb94c
               "client_type": 3
             }
           ]

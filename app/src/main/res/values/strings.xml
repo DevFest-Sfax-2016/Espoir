@@ -23,6 +23,10 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_types">Types</string>
+<<<<<<< HEAD
+    <string name="title_activity_galeries">Galerie</string>
+=======
+>>>>>>> b195bb06ae96c9b4b6a9e8a57c82413dce5bb94c
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
